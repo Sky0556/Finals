@@ -1,0 +1,1064 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Login Page Wrapper */
+.login-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f8f8;  /* Same as site background */
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Login Card Container */
+.login-container {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Login Title */
+.login-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #333333;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.login-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #C9A86A;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Login Form Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.login-form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #C9A86A;
+  box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.2);
+  outline: none;
+}
+
+/* Button (reuse your .btn and .btn-primary) */
+.login-form .btn {
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.login-form .btn-primary {
+  background-color: #C9A86A;
+  color: #ffffff;
+  border-color: #C9A86A;
+  box-shadow: 0 4px 10px rgba(201, 168, 106, 0.4);
+}
+
+.login-form .btn-primary:hover {
+  background-color: #b39059;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(201, 168, 106, 0.6);
+}
+
+/* Login Page Footer */
+.login-footer {
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+.login-footer a {
+  color: #C9A86A;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+  color: #8b0808;
+  text-decoration: underline;
+}
+
+
+
+/* Basic Resets & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8; /* Light background, similar to Canva */
+    color: #333333;
+    line-height: 1.7; /* Improved line-height for readability */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Consistent padding for content sections */
+}
+
+/* Header */
+.main-header {
+    background-color: #dedede; /* Dark grey, matching Canva header */
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.site-title {
+    margin-bottom: 0.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; /* Larger, prominent title */
+    color: #333333;
+    letter-spacing: 0.05em; /* Slightly spaced out letters */
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.8rem; /* Increased gap for better spacing */
+    justify-content: center; /* Center nav links */
+}
+
+.nav-link {
+    color: #C9A86A; /* Gold accent color */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 0.2rem 0.5rem; /* Small padding for hover effect */
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    background-color: #C9A86A;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.current::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link:hover {
+    color: #e0c28d; /* Lighter gold on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Hero Section (Homepage) */
+.hero-section {
+    background: url('302024081_491555186311205_6937792975952064917_n.jpg') center center / 100% 100% no-repeat; /* UPDATED: background-size to 100% 100% */
+    position: relative;
+    color: #ffffff;
+    padding: 8rem 1.5rem; /* Generous padding */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* Minimum height for visual impact */
+}
+
+.hero-content {
+    position: absolute; /* Changed to absolute positioning */
+    top: 5%; /* Position from the top */
+    right: 5%; /* Position from the right */
+    z-index: 2;
+    max-width: 450px; /* Constrain width to fit in the corner */
+    text-align: right; /* Align text to the right */
+    /* Removed margin: 0 auto; as it's absolutely positioned */
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; /* Large and impactful */
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    text-align: justify; /* Explicitly align text to the right */
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #555555;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+/* General Section Styling */
+section {
+    padding: 5rem 0; /* Consistent vertical spacing for all sections */
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #C9A86A; /* Gold underline */
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Intro Section (Homepage) */
+.section-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; /* Gap between intro cards */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.intro-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.intro-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #8b0808; /* Specific red from Canva */
+    margin-bottom: 1.2rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+/* Services and Portfolio Grids (Homepage Preview) */
+.service-grid,
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem; /* More spacing between items */
+    margin-top: 2.5rem;
+}
+
+.service-item,
+.portfolio-item {
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.service-item:hover,
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-img,
+.portfolio-img {
+    width: 100%;
+    height: 220px; /* Consistent image height */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.service-item:hover .service-img,
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.service-name,
+.portfolio-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem; /* Larger, more prominent buttons */
+    border-radius: 50px; /* Pill-shaped buttons for a softer look */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border: 2px solid transparent; /* Default transparent border */
+}
+
+.btn-primary {
+    background-color: #C9A86A; /* Gold background */
+    color: #ffffff;
+    border-color: #C9A86A;
+    box-shadow: 0 4px 10px rgba(201, 168, 106, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #b39059; /* Darker gold on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(201, 168, 106, 0.6);
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 4rem; /* Space above buttons */
+    
+}
+
+/* Contact Section */
+.section-contact {
+    background-color: #dedede; /* Light grey background */
+    text-align: center;
+    padding: 6rem 0;
+    margin-top: 2rem;
+}
+
+.contact-details {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #C9A86A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #8b0808; /* Red accent on hover */
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    background-color: #2e2e2e; /* Dark grey, matching header */
+    color: #ffffff;
+}
+
+/* --- NEW CSS FOR ABOUT & SERVICES PAGES --- */
+
+/* Page Specific Hero Sections */
+.page-hero-section {
+    background-color: #333; /* Fallback */
+    position: relative;
+    color: #ffffff;
+    padding: 6rem 1.5rem; /* Less padding than homepage hero */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Shorter hero for sub-pages */
+}
+
+.page-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.page-hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Specific background images for sub-page heroes (adjust paths as needed) */
+.about-hero {
+    background: url('126155497_860010561520240_1397075368856266799_n.jpg') center center / 100% 100% no-repeat;
+    position: relative;
+    color: #ffffff;
+    padding: 8rem 1.5rem; /* Generous padding */
+    justify-content: center;
+    min-height: 500px; /* Minimum height for visual impact */
+
+}
+
+.services-hero {
+    background: url('503587973_24724445513811080_3172004351428940815_n.jpg') center center / 100% 100% no-repeat;
+    position: relative;
+    color: #ffffff;
+    padding: 8rem 1.5rem; /* Generous padding */
+    justify-content: center;
+    min-height: 600px; /* Minimum height for visual impact */
+}
+
+.projects-hero {
+    background: url('https://placehold.co/1920x600/C9A86A/FFFFFF?text=Project Portfolio') center center / cover no-repeat;
+}
+
+
+* About Page Content */
+.section-about-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 3rem; /* Spacing between text and image blocks */
+    align-items: center;
+    margin-bottom: 4rem; /* Space between grid rows */
+}
+
+.about-grid:last-of-type {
+    margin-bottom: 0; /* No bottom margin for the last grid */
+}
+
+.about-text-block {
+    padding: 1rem;
+}
+
+.about-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #333333;
+    margin-bottom: 0rem;
+    text-align: left;
+}
+
+.about-text-block p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    text-align: justify; /* Justify text */
+}
+
+/* Base styles for the left-side card */
+.about-card-left {
+    /* Removed background-color to ensure image is visible */
+    background-size: contain; /* Changed to 'contain' to ensure the whole image is visible */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    color: #ffffff; /* White text color */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* Needed for pseudo-element positioning */
+    z-index: 0; /* Ensure it's below the overlay */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-align: center; /* Ensure text is centered */
+    min-height: 300px; /* Ensure a minimum height for the card */
+}
+
+
+.about-card-left .about-heading-card {
+    position: relative; /* Bring text above the overlay */
+    z-index: 2;
+}
+
+
+/* Specific background images for "Our Philosophy" and "Who We Are" */
+
+
+.about-card-who-we-are {
+    background-image: url('7e5cbc44-fbdb-4980-a8b1-43b12e1987bf.jpeg'); /* Placeholder for Who We Are image */
+
+}
+
+
+.about-heading-card { /* New class for headings inside the card */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; /* Larger font size for card heading */
+    color: #ffffff; /* White color for card heading */
+    margin: 0; /* Remove default margins */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Add text shadow for readability over image */
+}
+
+.about-heading-new { /* New class for headings inside the card */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; /* Increased font size to match section-title */
+    color: #333333; /* White color for card heading */
+    text-align: center;
+    position: relative; /* Needed for the pseudo-element underline */
+    text-shadow: none; /* Removed text shadow as it's on a solid background now */
+}
+
+.about-heading-new::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #C9A86A; /* Gold underline */
+    margin: 1rem auto 0; /* Center the underline */
+    border-radius: 2px;
+    margin-bottom: 2rem;
+}
+
+.about-heading-new-new {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; /* Increased font size to match section-title */
+    color: #333333; /* White color for card heading */
+    text-align: center;
+    position: relative; /* Needed for the pseudo-element underline */
+    text-shadow: none;
+}
+
+.about-heading-new-new::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #C9A86A; /* Gold underline */
+    margin: 1rem auto 0; /* Center the underline */
+    border-radius: 2px;
+    margin-bottom: 2rem;
+}
+
+
+.about-values {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid #eee; /* Separator line */
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-item {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #C9A86A; /* Gold accent for value titles */
+    margin-bottom: 0.8rem;
+}
+
+.value-item p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+
+
+
+/* Services Page Content */
+.section-services-list {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.service-detail-grid {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default */
+    gap: 5rem; /* Large gap between service details */
+}
+
+.service-detail-item {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically on small screens */
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-detail-img {
+    width: 100%;
+    height: 300px; /* Fixed height for service detail images */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.service-detail-item:hover .service-detail-img {
+    transform: scale(1.03);
+}
+
+.service-detail-content {
+    padding: 2.5rem;
+    flex: 1; /* Allows content to take available space */
+}
+
+.service-detail-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 1.2rem;
+}
+
+.service-detail-description {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.service-detail-content ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.service-detail-content ul li {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 1.5rem; /* Space for custom bullet */
+}
+
+.service-detail-content ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #C9A86A; /* Gold bullet */
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* NEW: Projects Page Styles */
+.section-projects-list {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.project-detail-grid {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default */
+    gap: 5rem; /* Large gap between project details */
+}
+
+.project-detail-item {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically on small screens */
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-detail-img {
+    width: 100%;
+    height: 300px; /* Fixed height for project detail images */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-detail-item:hover .project-detail-img {
+    transform: scale(1.03);
+}
+
+.project-detail-content {
+    padding: 2.5rem;
+    flex: 1; /* Allows content to take available space */
+}
+
+.project-detail-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 1.2rem;
+}
+
+.project-detail-description {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.project-detail-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.project-detail-content ul li {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-detail-content ul li::before {
+    content: '•';
+    color: #C9A86A;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    /* Existing responsive rules from previous version */
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site-title {
+        margin-bottom: 0;
+        font-size: 2.5rem;
+    }
+
+    .main-nav {
+        gap: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 4.5rem; /* Larger on desktop */
+    }
+
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+    }
+
+    .section-intro {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+
+    .service-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+    }
+
+    /* New responsive rules for About & Services */
+    .page-hero-title {
+        font-size: 4rem;
+    }
+
+    .page-hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    /* About Page Specific Layout: Image Left, Text Right */
+    .about-grid {
+        /* CHANGED: Explicitly set column widths for better control */
+        grid-template-columns: 40% 60%; 
+        gap: 3rem;
+    }
+    .about-grid .about-image-block {
+        /* ADDED: Explicitly set order for image to be on the left */
+        order: 1; 
+    }
+    .about-grid .about-text-block {
+        /* ADDED: Explicitly set order for text to be on the right */
+        order: 2; 
+    }
+
+    .about-heading {
+        font-size: 2.5rem;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Four columns for values */
+    }
+
+    .service-detail-item {
+        flex-direction: row; /* Side-by-side layout for service details */
+    }
+
+    .service-detail-item.reverse {
+        flex-direction: row-reverse; /* Reverse order for alternating layout */
+    }
+
+    .service-detail-img {
+        width: 40%; /* Image takes 40% width */
+        height: auto; /* Auto height to maintain aspect ratio */
+        max-height: 400px; /* Max height for larger screens */
+    }
+
+    .service-detail-content {
+        width: 60%; /* Content takes 60% width */
+    }
+
+    .service-detail-heading {
+        font-size: 2.2rem;
+    }
+
+    /* NEW: Projects Page Responsive Styles */
+    .project-detail-item {
+        flex-direction: row; /* Side-by-side layout for project details */
+    }
+
+    .project-detail-item.reverse {
+        flex-direction: row-reverse; /* Reverse order for alternating layout */
+    }
+
+    .project-detail-img {
+        width: 40%; /* Image takes 40% width */
+        height: auto; /* Auto height to maintain aspect ratio */
+        max-height: 400px; /* Max height for larger screens */
+    }
+
+    .project-detail-content {
+        width: 60%; /* Content takes 60% width */
+    }
+
+    .project-detail-heading {
+        font-size: 2.2rem;
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+    /* Existing responsive rules from previous version */
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-section {
+        min-height: 400px;
+        padding: 6rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-intro {
+        gap: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .intro-card {
+        padding: 2rem;
+    }
+
+    .intro-heading {
+        font-size: 1.6rem;
+    }
+
+    .service-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        gap: 1.5rem;
+    }
+
+    .service-item,
+    .portfolio-item {
+        padding: 1.2rem;
+    }
+
+    .service-img,
+    .portfolio-img {
+        height: 180px;
+    }
+
+    .service-name,
+    .portfolio-name {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .text-center {
+        margin-top: 3rem;
+    }
+
+    .section-contact {
+        padding: 3rem 0;
+    }
+
+    .contact-details {
+        font-size: 1rem;
+    }
+
+    .site-footer {
+        padding: 1.5rem 0;
+    }
+
+    /* New responsive rules for About & Services */
+    .page-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .page-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .about-text-block {
+        text-align: center; /* Center text on mobile for about page */
+    }
+
+    .about-heading {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr; /* Single column for values on mobile */
+    }
+
+    .service-detail-item {
+        flex-direction: column; /* Ensure vertical stacking on mobile */
+    }
+
+    .service-detail-img {
+        height: 250px; /* Adjust height for mobile */
+    }
+
+    .service-detail-content {
+        padding: 1.5rem;
+    }
+
+    .service-detail-heading {
+        font-size: 1.8rem;
+    }
+
+    .service-detail-content ul li {
+        padding-left: 1rem; /* Adjust padding for mobile list items */
+    }
+
+    /* NEW: Projects Page Responsive Styles */
+    .project-detail-item {
+        flex-direction: column; /* Ensure vertical stacking on mobile */
+    }
+
+    .project-detail-img {
+        height: 250px; /* Adjust height for mobile */
+    }
+
+    .project-detail-content {
+        padding: 1.5rem;
+    }
+
+    .project-detail-heading {
+        font-size: 1.8rem;
+    }
+
+    .project-detail-content ul li {
+        padding-left: 1rem;
+    }
+
+}
